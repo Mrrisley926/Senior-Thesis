@@ -13,10 +13,10 @@ plm_regression1 <- plm(tier1_EffElecThrsh ~ enpp1, data = Merged_data, index = c
                        model = "within")
 summary(plm_regression1)
 
-#Now adding Controls
-
+ 
 install.packages("modelsummary")
 library(modelsummary)
 msummary(plm_regression1, stars = c('*' = .1, '**' = .05, '***' = .01))
 
+#Next step is adding Controls
 
